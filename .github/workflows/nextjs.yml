@@ -76,7 +76,7 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
-          PEXELS_API_KEY: ${{ variables.PEXELS_API_KEY }}
+          PEXELS_API_KEY: ${{ env.PEXELS_API_KEY }}
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
