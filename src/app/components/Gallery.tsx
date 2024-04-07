@@ -7,7 +7,7 @@ export default async function Gallery() {
     const url = 'https://api.pexels.com/v1/curated';
     const images: ImagesResults | undefined = await fetchImages(url);
 
-    if (!images) return <h2 className="m-4 text-2xl font-bald">No images found</h2>
+    if (!images) return <h2 className="m-4 text-2xl font-bald text-white h-dvh text-center">No images found</h2>
 
     const photosWithBlur = await addBluredDataUrls(images);
 

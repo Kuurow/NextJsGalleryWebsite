@@ -8,7 +8,7 @@ const Navbar = () => {
             >
                 <div className="flex items-center justify-center h-12">
                     <div className="flex-shrink-0">
-                        <a href="/" className="text-white">Kuu's picture</a>
+                        <a href="/" className="text-white">Kuu's pictures</a>
                     </div>
                 </div>
             </div>
