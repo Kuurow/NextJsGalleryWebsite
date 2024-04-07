@@ -4,8 +4,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  title: "Next.js image gallery",
-  description: "LEZGO",
+  title: "Kuu's image gallery",
+  description: "POGGU",
 };
 
 export default function RootLayout({
