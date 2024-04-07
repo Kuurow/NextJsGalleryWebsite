@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Next.js image gallery",
@@ -13,10 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <main className="max-w-6xl mx-auto">
+      <body className="bg-gradient-to-b from-zinc-900 to-stone-800">
+        <Header />
+        <main className="max-w-8xl mx-auto pt-20">
           {children}
         </main>
+        <Footer/>
       </body>
     </html>
   );

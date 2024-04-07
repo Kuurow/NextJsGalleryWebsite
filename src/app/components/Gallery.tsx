@@ -12,12 +12,10 @@ export default async function Gallery() {
     const photosWithBlur = await addBluredDataUrls(images);
 
     return (
-        <section className="px-1 my-3 grid grid-cols-gallery auto-rows-[10px]">
-            
-                {photosWithBlur.map(image => (
-                    <ImgContainer key={image.id} photo={image} />
-                ))}
-            
+        <section className="px-1 my-3 grid grid-cols-gallery auto-rows-[10px] z-10">
+            {photosWithBlur.map(image => (
+                <ImgContainer key={image.id} photo={image} />
+            ))}
         </section>
     )
 }
