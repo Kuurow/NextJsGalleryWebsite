@@ -14,11 +14,11 @@ export default function ImgContainer({ photo }: Props) {
 
     return (
         <div className="w-[250px] justify-self-center" style={{ gridRow: `span ${photoSpans}`}}>
-            <Link href={photo.url} target="_blank" className="grid-place-content-center">
+            <Link href={photo.secure_url} target="_blank" className="grid-place-content-center">
                 <div className="rounded-xl overflow-hidden group">
                     <Image 
-                        src={photo.src.large}
-                        alt={photo.alt}
+                        src={photo.secure_url}
+                        alt=''
                         width={photo.width}
                         height={galleryHeight}
                         className="group-hover:scale-110 duration-1000"

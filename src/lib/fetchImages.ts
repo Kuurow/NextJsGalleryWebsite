@@ -7,15 +7,14 @@ Promise<ImagesResults | undefined> {
     try {
         const res = await fetch(url, {
             headers: {
-                Authorization: env.PEXELS_API_KEY
-            }
+                Authorization: 'Basic ' + btoa(env.CLOUDINARY_API_KEY + ':' + env.CLOUDINARY_API_SECRET)
+            },
+            next: { revalidate: 0 }
         })
 
-        if (!res.ok) throw new Error(`Fetching images failed!\n`);
+        if (!res.ok) throw new Error(`Fetching images failed!\n}`);
 
-        const imagesResults: ImagesResults = await res.json();
-
-        // console.log(imagesResults);
+        const imagesResults: ImagesResults = await res.json()
 
         // Data parsing
         const parsedData = ImagesSchemaWithPhotos.parse(imagesResults);

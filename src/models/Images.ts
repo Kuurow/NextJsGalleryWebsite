@@ -1,27 +1,25 @@
 import { z } from 'zod';
 
 const BasicImageSchema = z.object({
-    page: z.number(),
-    per_page: z.number(),
+    page: z.number().optional(),
+    per_page: z.number().optional(),
     prev_page: z.string().optional(),
     next_page: z.string().optional(),
-    total_results: z.number(),
+    total_results: z.number().optional(),
 })
 
 const PhotoSchema = z.object({
-    id: z.number(),
+    asset_id: z.string(),
     width: z.number(),
     height: z.number(),
     url: z.string(),
-    src: z.object({
-        large: z.string(),
-    }),
-    alt: z.string(),
+    secure_url: z.string(),
+    alt: z.string().optional(),
     blurredDataUrl: z.string().optional(),
 })
 
 export const ImagesSchemaWithPhotos = BasicImageSchema.extend({
-    photos: z.array(PhotoSchema),
+    resources: z.array(PhotoSchema),
 })
 
 export type Photo = z.infer<typeof PhotoSchema>

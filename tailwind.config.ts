@@ -12,12 +12,15 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "topo": "url('/img/topography.svg')"
       },
       gridTemplateColumns: {
         "gallery": "repeat(auto-fit, minmax(275px, 1fr))",
       },
     },
+    screens: {
+        'tablet': '556px',
+        'desktop': '574px',
+    }
   },
   plugins: [],
 };
