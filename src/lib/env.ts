@@ -1,7 +1,6 @@
 import { cleanEnv, str } from "envalid";
 
 const env = cleanEnv(process.env, {
-    PEXELS_API_KEY: str(),
     CLOUDINARY_CLOUD_NAME: str(),
     CLOUDINARY_API_KEY: str(),
     CLOUDINARY_API_SECRET: str(),
