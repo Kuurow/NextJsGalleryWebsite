@@ -29,7 +29,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env: 
-      PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+      CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+      CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+      CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }} 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
