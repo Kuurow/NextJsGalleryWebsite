@@ -8,8 +8,7 @@ Promise<ImagesResults | undefined> {
         const res = await fetch(url, {
             headers: {
                 Authorization: 'Basic ' + btoa(env.CLOUDINARY_API_KEY + ':' + env.CLOUDINARY_API_SECRET)
-            },
-            next: { revalidate: 0 }
+            }
         })
 
         if (!res.ok) throw new Error(`Fetching images failed!\n}`);
