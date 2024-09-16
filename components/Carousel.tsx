@@ -16,12 +16,7 @@ export default function Carousel({
   const [, setLastViewedPhoto] = useLastViewedPhoto();
 
   function closeModal() {
-    setLastViewedPhoto(currentPhoto.id);
     router.push("/", undefined, { shallow: true });
-  }
-
-  function changePhotoId(newVal: number) {
-    return newVal;
   }
 
   useKeypress("Escape", () => {
@@ -44,7 +39,6 @@ export default function Carousel({
       </button>
       <SharedModal
         index={index}
-        changePhotoId={changePhotoId}
         currentPhoto={currentPhoto}
         closeModal={closeModal}
         navigation={false}

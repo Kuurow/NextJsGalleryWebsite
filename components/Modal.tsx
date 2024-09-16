@@ -75,7 +75,6 @@ export default function Modal({
         index={curIndex}
         direction={direction}
         images={images}
-        changePhotoId={changePhotoId}
         closeModal={handleClose}
         navigation={true}
       />
