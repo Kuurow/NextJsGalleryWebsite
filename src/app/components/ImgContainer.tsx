@@ -9,13 +9,13 @@ type Props = {
 export default function ImgContainer({ photo }: Props) {
 
     const widthHeightRatio = photo.height / photo.width
-    const galleryHeight = Math.ceil(250 * widthHeightRatio)
+    const galleryHeight = Math.ceil(340 * widthHeightRatio)
     const photoSpans = Math.ceil(galleryHeight / 10) + 1
 
     return (
-        <div className="w-[250px] justify-self-center" style={{ gridRow: `span ${photoSpans}`}}>
-            <Link href={photo.secure_url} target="_blank" className="grid-place-content-center">
-                <div className="rounded-xl overflow-hidden group">
+        <div className="w-[340px] justify-self-center" style={{ gridRow: `span ${photoSpans}`}}>
+            <Link href='#' className="grid-place-content-center">
+                <div className="overflow-hidden group">
                     <Image 
                         src={photo.secure_url}
                         alt=''
@@ -24,7 +24,7 @@ export default function ImgContainer({ photo }: Props) {
                         className="group-hover:scale-110 duration-1000"
                         placeholder="blur"
                         blurDataURL={photo.secure_url}
-                        sizes="250px"
+                        sizes="300px"
                     />
                 </div>
             </Link>

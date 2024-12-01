@@ -8,19 +8,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       gridTemplateColumns: {
         "gallery": "repeat(auto-fit, minmax(275px, 1fr))",
+      },
+      backgroundImage: {
+        custom: "url('/img/hhholographic.webp')"
+      },
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+      },
+      minHeight: {
+        view: "calc(100vh - 10rem)"
       },
     },
     screens: {
         'tablet': '556px',
         'desktop': '574px',
-    }
+    }, 
   },
   plugins: [],
 };

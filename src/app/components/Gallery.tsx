@@ -13,7 +13,7 @@ export default async function Gallery() {
     const photosWithBlur = await addBluredDataUrls(images);
 
     return (
-        <section className="px-1 grid grid-cols-gallery auto-rows-[10px] z-10 h-vh tablet:h-dvh desktop:h-dvh">
+        <section className="grid grid-cols-gallery auto-rows-[10px] z-10 h-vh tablet:h-dvh desktop:h-dvh">
             {photosWithBlur.map(image => (
                 <ImgContainer key={image.asset_id} photo={image} />
             ))}
